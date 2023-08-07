@@ -10,5 +10,7 @@ public interface Constants {
 	String edge_path=System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\msedgedriver.exe";
 	String baseURL="https://example.testproject.io/web/";
 	
+	
+	
 
 }
