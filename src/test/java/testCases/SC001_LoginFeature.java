@@ -1,21 +1,14 @@
 package testCases;
 
 import static org.testng.Assert.assertEquals;
-
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import base.Constants;
 import base.DriverConfig;
 import base.Utilities;
-import dev.failsafe.internal.util.Assert;
 import pages.Login;
 
 public class SC001_LoginFeature {
@@ -25,24 +18,26 @@ public class SC001_LoginFeature {
 	String exp_wlecome_msg = "TestProject Example page";
 	String exp_error_msg = "Password is invalid";
 
-	@BeforeSuite
-	public void beforeSuite() throws InterruptedException {
+	/*
+	 * @BeforeSuite public void beforeSuite() throws InterruptedException {
+	 * 
+	 * System.out.println("This is before Suite Method..."); driver =
+	 * DriverConfig.getBrowser(Constants.browser); driver.get(Constants.baseURL);
+	 * util = new Utilities(driver); util.windowMaximize();
+	 * 
+	 * }
+	 * 
+	 * @AfterSuite public void afterSuite() {
+	 * System.out.println("Under After Suite Method..."); driver.close(); }
+	 */
+
+	@BeforeTest
+	public void beforeTest() throws InterruptedException {
 		System.out.println("This is before Suite Method...");
 		driver = DriverConfig.getBrowser(Constants.browser);
 		driver.get(Constants.baseURL);
 		util = new Utilities(driver);
 		util.windowMaximize();
-
-	}
-
-	@AfterSuite
-	public void afterSuite() {
-		System.out.println("Under After Suite Method...");
-		driver.close();
-	}
-
-	@BeforeTest
-	public void beforeTest() throws InterruptedException {
 		System.out.println("Under Before Test...");
 		login = PageFactory.initElements(driver, Login.class);
 	}
@@ -50,7 +45,7 @@ public class SC001_LoginFeature {
 	@AfterTest
 	public void afterTest() {
 		System.out.println("Under After Test...");
-
+		driver.close();
 	}
 
 	@Test
@@ -71,7 +66,6 @@ public class SC001_LoginFeature {
 		String ac_error_msg = login.error_txt();
 		System.out.println(ac_error_msg);
 		assertEquals(exp_error_msg, ac_error_msg);
-		
 	}
 
 }

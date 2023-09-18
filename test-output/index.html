@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-App_Testing" class="show-methods passed suite-App_Testing"> (show)</a> <!-- show-methods passed suite-App_Testing -->
                     </span>
                     <div class="method-list-content passed suite-App_Testing">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-App_Testing" title="testCases.SC002_LoginWithExcel" class="method navigator-link" hash-for-method="TC001_Successfull_Login">TC001_Successfull_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-App_Testing" title="testCases.SC001_LoginFeature" class="method navigator-link" hash-for-method="TC001_successLogin">TC001_successLogin</a> <!-- method navigator-link -->
@@ -124,6 +129,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-App_Testing" class="panel App_Testing">
+          <div class="suite-App_Testing-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.SC002_LoginWithExcel</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC001_Successfull_Login">
+                  </a> <!-- TC001_Successfull_Login -->
+                  <span class="method-name">TC001_Successfull_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-App_Testing-class-passed -->
           <div class="suite-App_Testing-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -159,6 +179,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;App Testing&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.SC001_LoginFeature&quot;/&gt;
+      &lt;class name=&quot;testCases.SC002_LoginWithExcel&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- App Testing --&gt;
 &lt;/suite&gt; &lt;!-- App Testing --&gt;
@@ -172,7 +193,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">App Testing (1 class)</span>
+                <span class="test-name">App Testing (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,20 +219,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC001_successLogin')
 data.setCell(0, 2, 'testCases.SC001_LoginFeature')
-data.setCell(0, 3, 1031);
+data.setCell(0, 3, 614);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC002_unSuccessfull_login')
 data.setCell(1, 2, 'testCases.SC001_LoginFeature')
-data.setCell(1, 3, 443);
+data.setCell(1, 3, 220);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC001_Successfull_Login')
+data.setCell(2, 2, 'testCases.SC002_LoginWithExcel')
+data.setCell(2, 3, 1);
 window.suiteTableData['App_Testing']= { tableData: data, tableDiv: 'times-div-App_Testing'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 835 ms</span>
               <div id="times-div-App_Testing">
               </div> <!-- times-div-App_Testing -->
             </div> <!-- times-div -->
@@ -238,30 +263,49 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.SC001_LoginFeature</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">4258 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.SC002_LoginWithExcel</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">3063 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.SC001_LoginFeature</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC001_successLogin</span>
-                <span class="method-start">4365 ms</span>
+                <span class="method-start">5383 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC002_unSuccessfull_login</span>
-                <span class="method-start">5403 ms</span>
+                <span class="method-start">6000 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.SC002_LoginWithExcel</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC001_Successfull_Login</span>
+                <span class="method-start">6223 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.SC001_LoginFeature</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">5853 ms</span>
+                <span class="method-start">6225 ms</span>
               </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">5924 ms</span>
-              </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.SC002_LoginWithExcel</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">6385 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

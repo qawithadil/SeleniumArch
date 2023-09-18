@@ -4,6 +4,7 @@
   <test thread-count="5" name="App Testing">
 	  <classes>
 		  <class name="testCases.SC001_LoginFeature"></class>
+		  <class name="testCases.SC002_LoginWithExcel"></class>
 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

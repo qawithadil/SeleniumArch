@@ -3,15 +3,11 @@
 <suite name="Failed suite [App Testing]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="App Testing(failed)">
     <classes>
-      <class name="testCases.SC001_LoginFeature">
+      <class name="testCases.SC002_LoginWithExcel">
         <methods>
-          <include name="TC002_unSuccessfull_login"/>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
-          <include name="afterTest"/>
-          <include name="beforeSuite"/>
+          <include name="TC001_Successfull_Login"/>
         </methods>
-      </class> <!-- testCases.SC001_LoginFeature -->
+      </class> <!-- testCases.SC002_LoginWithExcel -->
     </classes>
   </test> <!-- App Testing(failed) -->
 </suite> <!-- Failed suite [App Testing] -->
